@@ -6,6 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get full-upgrade --yes && apt-get install --yes --no-install-recommends \
     ca-certificates \
     git \
+    git-lfs \
     python \
     python-openssl \
     unzip \
