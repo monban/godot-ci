@@ -1,5 +1,5 @@
-FROM ubuntu:latest
-LABEL author="himitsu.monban@gmail.com"
+FROM ubuntu:focal
+LABEL author="artur@barichello.me"
 
 USER root
 ENV DEBIAN_FRONTEND=noninteractive
@@ -18,7 +18,7 @@ RUN apt-get update && apt-get full-upgrade --yes && apt-get install --yes --no-i
     wine-stable \
     && rm -rf /var/lib/apt/lists/*
 
-RUN wget --quiet https://github.com/electron/rcedit/releases/download/v1.1.1/rcedit-x64.exe -O ~/rcedit.exe
+RUN wget --quiet https://github.com/electron/rcedit/releases/download/v1.1.1/rcedit-x64.exe -O /usr/local/bin/rcedit.exe
 
 ENV GODOT_VERSION "3.2.3"
 
